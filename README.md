@@ -1,4 +1,4 @@
-# GenAI Engineer 365
+# GenAI Engineer 365 Days
 
 ## Overview
 
