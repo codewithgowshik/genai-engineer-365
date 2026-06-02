@@ -13,23 +13,24 @@ Set up the development environment and establish the repository structure for th
   
   ```bash
 python -m venv .venv
+.venv\Scripts\activate
 ```
 
 ### What is PEP 8 ?
   `PEP = Python Enhancement Proposal`
-  *There are some certain rules to be followed in industry strandads to write a code in python.
-  Rule 1 : Use the snake_case for variables and functions.
-              `eg : user_name = 'gowshik', def student_id():`
-  Rule 2 : Use padelcase for classes.
-              `eg : class studentname:`
-  Rule 3 : Spaces around operators.
-              `eg : a = a + b`
-  Rule 4 : Indentation = 4 spaces.
-  Rule 5 : Keep the names short.
-  Rule 6 : Use Empty Line in code to make it clear look.
-  Rule 7 : Use Upper_case letters for constants.
-              `eg : PI_VALUE = 3.14`
-  Rule 8 : Use Clear Comments.
+
+  * PEP 8 is the official Python style guide that helps developers write readable and maintainable code.
+
+### Key PEP 8 Rules
+
+- Use snake_case for variables and functions.
+- Use PascalCase for classes.
+- Use spaces around operators.
+- Use 4-space indentation.
+- Keep names meaningful and concise.
+- Use blank lines to improve readability.
+- Use UPPER_CASE for constants.
+- Write clear comments when necessary.
 
 ## Repository Setup
 
