@@ -1,12 +1,12 @@
-# GenAI Engineer 365 Days
+# GenAI Engineer - 365 Days
 
 ## Overview
 
-This repository documents my structured learning journey into Generative AI and Agentic AI Engineering.
+This repository documents my journey of learning and building modern Generative AI and Agentic AI systems through a structured, project-based approach.
 
-The objective is to develop a strong practical foundation in modern AI application development through hands-on projects covering large language models (LLMs), retrieval-augmented generation (RAG), AI agents, multimodal systems, evaluation frameworks, and deployment.
+The goal is to develop practical expertise in AI application development by building real-world projects and documenting key concepts, implementation decisions, and lessons learned throughout the process.
 
-The repository serves as a centralized workspace for learning notes, project implementations, technical documentation, and portfolio projects.
+The repository serves as a centralized workspace for learning notes, technical documentation, project implementations, and experimentation with modern AI technologies.
 
 ---
 
@@ -23,7 +23,7 @@ The repository serves as a centralized workspace for learning notes, project imp
 
 ### Generative AI
 
-* LLM APIs
+* Large Language Models (LLMs)
 * Prompt Engineering
 * Structured Outputs
 * Function Calling
@@ -37,14 +37,14 @@ The repository serves as a centralized workspace for learning notes, project imp
 
 ### Agentic AI
 
-* Tool Calling
+* Tool Use
 * Memory Systems
-* Planning & Reasoning
+* Planning and Reasoning
 * Multi-Agent Architectures
 
 ### Model Development
 
-* Open-Source Models
+* Open Source Models
 * Fine-Tuning
 * LoRA & QLoRA
 * Model Evaluation
@@ -77,8 +77,9 @@ The repository serves as a centralized workspace for learning notes, project imp
 genai-engineer-365
 
 ├── learning_notes/
+│
 ├── projects/
-├── portfolio/
+│
 ├── resources/
 │
 ├── README.md
@@ -86,37 +87,45 @@ genai-engineer-365
 └── .gitignore
 ```
 
+### learning_notes
+
+Contains daily learning notes, technical concepts, implementation details, and reflections throughout the journey.
+
+### projects
+
+Contains all project implementations developed during the learning process.
+
+### resources
+
+Contains useful references, documentation links, books, articles, and supporting materials.
+
 ---
 
 ## Projects
 
-| Project                       | Description                                          |
-| ----------------------------- | ---------------------------------------------------- |
-| LLM-Powered CLI Assistant     | Command-line assistant powered by LLM APIs           |
-| Structured Extraction Service | Extraction of structured data from unstructured text |
-| Semantic Search Engine        | Embedding-based document search system               |
-| Production RAG Application    | Retrieval-Augmented Generation system                |
-| Fine-Tuned Domain Assistant   | Domain-specific fine-tuned language model            |
-| AI Agent with Tools           | Agent capable of using external tools                |
-| Multi-Agent System            | Coordinated multi-agent architecture                 |
-| Evaluated & Observable Agent  | Agent with evaluation and monitoring capabilities    |
-| Multimodal AI Application     | Text, image and/or speech processing system          |
-| Agentic AI Capstone           | End-to-end production-ready AI application           |
-
----
-
-## Documentation
-
-Technical notes, implementation details, and project documentation are maintained throughout the repository to support continuous learning and knowledge retention.
+| Project    | Description                   |
+| ---------- | ----------------------------- |
+| Project 01 | LLM-Powered CLI Assistant     |
+| Project 02 | Structured Extraction Service |
+| Project 03 | Semantic Search Engine        |
+| Project 04 | Production RAG Application    |
+| Project 05 | Fine-Tuned Domain Assistant   |
+| Project 06 | AI Agent with Tools           |
+| Project 07 | Multi-Agent System            |
+| Project 08 | Evaluated & Observable Agent  |
+| Project 09 | Multimodal AI Application     |
+| Project 10 | Agentic AI Capstone           |
 
 ---
 
 ## Technologies
 
-Python • FastAPI • Pydantic • OpenAI • Anthropic • Ollama • Hugging Face • ChromaDB • FAISS • LangGraph • LangChain • Streamlit • Docker • GitHub Actions
+Python, FastAPI, Pydantic, OpenAI API, Anthropic API, Ollama, Hugging Face, ChromaDB, FAISS, LangGraph, LangChain, Streamlit, Docker, GitHub Actions
 
 ---
 
 ## Purpose
 
-The purpose of this repository is to develop practical expertise in modern AI engineering by building real-world systems and documenting the learning process through project-based development.
+The purpose of this repository is to develop practical skills in modern AI engineering through continuous learning, experimentation, and project development.
+
+All projects, notes, and documentation are maintained as part of an ongoing effort to build production-oriented AI systems and gain hands-on experience with current AI technologies.
