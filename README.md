@@ -10,6 +10,24 @@ The repository serves as a centralized workspace for learning notes, technical d
 
 ---
 
+
+## Background
+
+I am a Computer Science student with an intermediate understanding of Python and software development fundamentals.
+
+Prior to starting this journey, I had experience with:
+
+* Python programming
+* Object-Oriented Programming (OOP)
+* Git & GitHub
+* Software development projects
+* Problem solving and debugging
+
+This repository focuses on expanding those foundations into modern Generative AI and Agentic AI engineering through hands-on projects and practical implementation.
+
+---
+
+
 ## Learning Areas
 
 ### Software Engineering Foundations
