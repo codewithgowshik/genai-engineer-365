@@ -1,0 +1,105 @@
+# Day 002 - Python Fundamentals & Type Hints
+
+## Objective
+
+Learn the fundamental Python concepts required for software and AI development.
+
+## Topics Covered
+
+### Variables
+
+Variables are used to store data that can be used and modified throughout a program.
+
+Example:
+
+* user_name = "Gowshik"
+* user_age = 18
+
+### Data Types
+
+Python provides different data types for storing information.
+
+* str → Text values
+* int → Integer numbers
+* float → Decimal numbers
+* bool → True or False values
+
+Examples:
+
+* "Hello"
+* 10
+* 3.14
+* True
+
+### Print Statement
+
+The `print()` function is used to display output to the console.
+
+Example:
+
+```python
+print("Hello World")
+```
+
+### f-Strings
+
+f-Strings allow variables to be inserted directly into strings.
+
+Example:
+
+```python
+age = 18
+print(f"I am {age} years old")
+```
+
+### Functions
+
+Functions are reusable blocks of code designed to perform specific tasks.
+
+Example:
+
+```python
+def myname():
+    print("Gowshik")
+```
+
+### Function Parameters
+
+Parameters allow data to be passed into functions.
+
+Example:
+
+```python
+def greet(name):
+    print(f"Hello {name}")
+```
+
+### Return Values
+
+The `return` keyword sends a value back from a function.
+
+Example:
+
+```python
+def add(a, b):
+    return a + b
+```
+
+### Type Hints
+
+Type hints describe what type of data a function expects and what type it returns.
+
+Example:
+
+```python
+def add(a: int, b: int) -> int:
+    return a + b
+```
+
+Benefits:
+
+* Improves readability
+* Helps with debugging
+* Makes code easier to maintain
+
+Today I strengthened my Python fundamentals by learning how data is stored, processed, and returned through functions. These concepts form the foundation for future AI and software engineering projects.
