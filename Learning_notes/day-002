@@ -102,4 +102,14 @@ Benefits:
 * Helps with debugging
 * Makes code easier to maintain
 
+## Repository Setup
+
+Created:
+
+* README.md
+* LICENSE
+* .gitignore
+* learning_notes/
+* src/
+
 Today I strengthened my Python fundamentals by learning how data is stored, processed, and returned through functions. These concepts form the foundation for future AI and software engineering projects.
