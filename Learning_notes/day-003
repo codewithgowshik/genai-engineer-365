@@ -1,0 +1,167 @@
+# Day 003 - APIs, JSON & HTTP Fundamentals
+
+## Objective
+
+Learn how applications communicate over the internet using APIs and understand JSON, HTTP requests, and response status codes.
+
+---
+
+## Topics Covered
+
+### What is an API?
+
+API stands for **Application Programming Interface**.
+
+An API acts as a bridge between two applications, allowing them to communicate and exchange information.
+
+Example:
+
+```text
+User → Application → API → Service
+```
+
+In AI applications, APIs are used to send prompts to language models and receive responses.
+
+---
+
+### What is JSON?
+
+JSON (JavaScript Object Notation) is a lightweight format used to store and exchange data.
+
+Example:
+
+```json
+{
+  "name": "Gowshik",
+  "age": 18,
+  "student": true
+}
+```
+
+JSON is the most common data format used by modern APIs.
+
+---
+
+### Python Dictionary vs JSON
+
+Python Dictionary:
+
+```python
+student = {
+    "name": "Gowshik",
+    "age": 18,
+    "student": True
+}
+```
+
+JSON:
+
+```json
+{
+  "name": "Gowshik",
+  "age": 18,
+  "student": true
+}
+```
+
+JSON is often used when sending or receiving data through APIs.
+
+---
+
+### HTTP Requests
+
+HTTP is the protocol used for communication between applications over the internet.
+
+Common request methods:
+
+#### GET
+
+Used to retrieve information.
+
+Example:
+
+```text
+Get user information
+Get weather information
+Get GitHub profile data
+```
+
+#### POST
+
+Used to send information.
+
+Example:
+
+```text
+Send a prompt to an AI model
+Create a new user account
+Submit a form
+```
+
+Most AI APIs use POST requests because data is being sent to the model.
+
+---
+
+### HTTP Status Codes
+
+Status codes indicate the result of an API request.
+
+| Status Code | Meaning               |
+| ----------- | --------------------- |
+| 200         | Request successful    |
+| 400         | Bad request           |
+| 401         | Unauthorized          |
+| 404         | Resource not found    |
+| 500         | Internal server error |
+
+Examples:
+
+* 200 → Request completed successfully.
+* 404 → Requested page or resource does not exist.
+* 401 → Authentication is required.
+
+---
+
+### Python Requests Library
+
+The `requests` library is commonly used to interact with APIs in Python.
+
+Example:
+
+```python
+import requests
+
+response = requests.get("https://api.github.com")
+
+print(response.status_code)
+```
+
+The response object contains information returned by the API.
+
+---
+
+### JSON Serialization
+
+Python provides the `json` module to work with JSON data.
+
+Example:
+
+```python
+import json
+
+student = {
+    "name": "Gowshik",
+    "age": 18
+}
+
+student_json = json.dumps(student)
+
+print(student_json)
+```
+
+`json.dumps()` converts a Python dictionary into JSON format.
+
+---
+
+
+Today I learned the fundamental concepts behind API communication and data exchange. Understanding APIs and JSON is essential because modern AI applications rely heavily on external services and language model APIs. These concepts will serve as the foundation for interacting with AI models in future projects.
