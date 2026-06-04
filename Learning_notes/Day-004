@@ -1,0 +1,154 @@
+# Day 004 - Environment Variables & Secret Management
+
+## Objective
+
+Learn how professional developers store sensitive information outside of source code using environment variables.
+
+---
+
+## Topics Covered
+
+### What is an Environment Variable?
+
+An environment variable is a value stored outside of the application code that can be accessed when the program runs.
+
+Environment variables are commonly used to store:
+
+* API Keys
+* Database Credentials
+* Configuration Settings
+* Secret Values
+
+---
+
+### What is a .env File?
+
+A `.env` file is used to store environment variables in a simple key-value format.
+
+Example:
+
+```text
+MY_NAME=Gowshik
+MY_AGE=18
+```
+
+---
+
+### python-dotenv
+
+The `python-dotenv` package allows Python applications to read values from a `.env` file.
+
+Import:
+
+```python
+from dotenv import load_dotenv
+```
+
+Load environment variables:
+
+```python
+load_dotenv()
+```
+
+---
+
+### os.getenv()
+
+The `os.getenv()` function retrieves a value from the environment.
+
+Example:
+
+```python
+name = os.getenv("MY_NAME")
+```
+
+If the variable exists:
+
+```text
+Gowshik
+```
+
+is returned.
+
+If the variable does not exist:
+
+```python
+None
+```
+
+is returned.
+
+---
+
+### How Environment Variables Work
+
+Example `.env` file:
+
+```text
+MY_NAME=Gowshik
+```
+
+Python code:
+
+```python
+from dotenv import load_dotenv
+import os
+
+load_dotenv()
+
+name = os.getenv("MY_NAME")
+
+print(name)
+```
+
+Output:
+
+```text
+Gowshik
+```
+
+Process:
+
+1. Python opens the `.env` file.
+2. The variables are loaded into memory.
+3. `os.getenv()` retrieves the requested value.
+4. The value is stored in a Python variable.
+
+---
+
+### Why Not Store Secrets in Code?
+
+Bad Practice:
+
+```python
+api_key = "secret_key"
+```
+
+Reasons:
+
+* Exposes secrets in source code.
+* Can accidentally be uploaded to GitHub.
+* Creates security risks.
+
+Better Practice:
+
+```text
+API_KEY=secret_key
+```
+
+Store secrets inside `.env` and access them using `os.getenv()`.
+
+---
+
+### .gitignore
+
+The `.gitignore` file prevents sensitive files from being uploaded to GitHub.
+
+Example:
+
+```text
+.env
+```
+
+This ensures secret values remain private.
+
