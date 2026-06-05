@@ -1,0 +1,125 @@
+# Day 005 - Error Handling & API Response Validation
+
+## Objective
+
+Learn how to handle errors in Python applications and validate API responses before using the returned data.
+
+---
+
+## Topics Covered
+
+### What is Error Handling?
+
+Error handling is the process of managing unexpected situations that may cause a program to fail.
+
+Examples:
+
+* Invalid user input
+* Failed API requests
+* Missing files
+* Network issues
+
+Without error handling, a program may crash and stop execution.
+
+---
+
+### try and except
+
+Python uses `try` and `except` blocks to handle errors gracefully.
+
+Example:
+
+```python
+try:
+    age = int("hello")
+    print(age)
+
+except ValueError:
+    print("Invalid number")
+```
+
+Output:
+
+```text
+Invalid number
+```
+
+Instead of crashing, the program continues running.
+
+---
+
+### Why Error Handling is Important
+
+Benefits:
+
+* Prevents application crashes
+* Improves user experience
+* Makes applications more reliable
+* Helps identify and manage failures
+
+Professional applications always include error handling.
+
+---
+
+### API Response Validation
+
+When working with APIs, requests may fail for many reasons:
+
+* Invalid URL
+* Internet connection issues
+* Server errors
+* Authentication failures
+
+Because of this, API responses should always be checked before processing the data.
+
+Example:
+
+```python
+if response.status_code == 200:
+    print("Request successful")
+else:
+    print("Request failed")
+```
+  
+### Validating API Responses
+
+Example:
+
+```python
+import requests
+
+response = requests.get(
+    "https://catfact.ninja/fact"
+)
+
+if response.status_code == 200:
+    data = response.json()
+    print(data["fact"])
+
+else:
+    print("Request failed")
+```
+
+The response is only processed if the request succeeds.
+
+---
+
+### Better Error Messages
+
+Instead of:
+
+```python
+print("Request failed")
+```
+
+Provide more information:
+
+```python
+print(
+    f"Request failed with status code: {response.status_code}"
+)
+```
+
+This helps with debugging.
+
+---
