@@ -1,0 +1,195 @@
+# Day 006 - Gemini SDK, API Responses & One-Shot Question Answer Application
+
+## Objective
+
+Learn how to interact with a Large Language Model (LLM) using the Gemini SDK and build a simple one-shot question-answer application.
+
+---
+
+## Topics Covered
+
+### What is an SDK?
+
+SDK stands for Software Development Kit.
+
+An SDK provides pre-built tools and functions that allow developers to interact with a service without manually handling HTTP requests.
+
+Example:
+
+```python
+response = client.models.generate_content(
+    model="gemini-2.5-flash",
+    contents="What is Python?"
+)
+```
+
+The Gemini SDK handles authentication, request formatting, and response processing.
+
+---
+
+### Environment Variables
+
+Sensitive information such as API keys should not be stored directly in source code.
+
+A `.env` file is used to store secret values.
+
+Example:
+
+```text
+API_KEY=your_api_key_here
+```
+
+The value can be accessed using:
+
+```python
+os.getenv("API_KEY")
+```
+
+---
+
+### Creating a Gemini Client
+
+A client object is used to communicate with the Gemini API.
+
+Example:
+
+```python
+client = genai.Client(
+    api_key=os.getenv("API_KEY")
+)
+```
+
+The client acts as a bridge between the application and Google's Gemini service.
+
+---
+
+### User Input
+
+The application accepts a question from the user.
+
+Example:
+
+```python
+question = input("Ask anything: ")
+```
+
+The input is stored in a variable and passed to the language model.
+
+---
+
+### Functions
+
+Functions help organise and reuse code.
+
+Example:
+
+```python
+def llm(prompt: str):
+    pass
+```
+
+The user's question is passed into the function through the `prompt` parameter.
+
+---
+
+### API Responses
+
+The Gemini model generates a response based on the provided prompt.
+
+Example:
+
+```python
+response = client.models.generate_content(
+    model=model,
+    contents=prompt
+)
+```
+
+The generated answer can be accessed using:
+
+```python
+response.text
+```
+
+---
+
+### Error Handling
+
+Error handling prevents the application from crashing when unexpected problems occur.
+
+Example:
+
+```python
+try:
+    ...
+except Exception:
+    ...
+```
+
+Common causes:
+
+* Invalid API key
+* Internet connection issues
+* Service outages
+* Rate limits
+
+---
+
+### Retry Logic
+
+The application retries failed requests automatically.
+
+Example:
+
+```python
+for attempt in range(3):
+```
+
+If a request fails, the application waits briefly and tries again.
+
+Benefits:
+
+* Improves reliability
+* Handles temporary network issues
+* Reduces failed requests
+
+---
+
+### Loading Animation with Rich
+
+The Rich library provides professional terminal UI features.
+
+Example:
+
+```python
+with console.status("Thinking..."):
+```
+
+The spinner appears while Gemini processes the request and automatically stops when the response is received.
+
+Benefits:
+
+* Better user experience
+* Indicates that the application is still working
+* Makes CLI applications feel professional
+
+---
+
+## Application Flow
+
+```text
+User enters question
+        ↓
+Question stored in variable
+        ↓
+Question passed to llm()
+        ↓
+Gemini API receives prompt
+        ↓
+Gemini generates response
+        ↓
+Response returned
+        ↓
+Application prints answer
+```
+
