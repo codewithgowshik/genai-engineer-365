@@ -1,0 +1,263 @@
+# Day 007 - Git Branches, Pull Requests and Merge Workflow
+
+## Objective
+
+Learn how professional developers use Git branches and Pull Requests (PRs) to develop features safely without affecting the main codebase.
+
+---
+
+## Topics Covered
+
+### What is a Branch?
+
+A branch is an independent line of development that allows developers to work on new features without modifying the main project.
+
+The default branch is usually:
+
+```text
+main
+```
+
+Example:
+
+```text
+main
+ │
+ └── week-1
+```
+
+The `week-1` branch starts as a copy of `main`.
+
+Any changes made in `week-1` do not affect `main` until they are merged.
+
+---
+
+### Why Use Branches?
+
+Benefits:
+
+* Protects the stable version of the project.
+* Allows experimentation without risk.
+* Supports collaboration among multiple developers.
+* Makes code review easier.
+
+Without branches:
+
+```text
+main ❌ broken
+```
+
+With branches:
+
+```text
+main ✅ stable
+
+week-1 ❌ broken
+```
+
+The main branch remains safe.
+
+---
+
+### Creating a Branch
+
+Create and switch to a new branch:
+
+```bash
+git checkout -b week-1
+```
+
+Check current branches:
+
+```bash
+git branch
+```
+
+Example output:
+
+```text
+main
+* week-1
+```
+
+The `*` indicates the active branch.
+
+---
+
+### What is a Commit?
+
+A commit is a saved snapshot of the project at a specific point in time.
+
+Example:
+
+```bash
+git commit -m "Add Day 6 learning notes"
+```
+
+Benefits:
+
+* Tracks project history.
+* Allows reverting to previous versions.
+* Documents progress.
+
+---
+
+### What is git add?
+
+Git must know which files should be included in the next commit.
+
+Example:
+
+```bash
+git add .
+```
+
+The period (`.`) means:
+
+```text
+Add all changed files
+```
+
+---
+
+### What is git push?
+
+Push uploads local commits to GitHub.
+
+Example:
+
+```bash
+git push
+```
+
+Flow:
+
+```text
+Local Machine
+      ↓
+GitHub Repository
+```
+
+---
+
+### What is a Pull Request (PR)?
+
+A Pull Request is a request to merge changes from one branch into another.
+
+Example:
+
+```text
+week-1
+   ↓
+Pull Request
+   ↓
+main
+```
+
+A PR allows changes to be reviewed before merging.
+
+---
+
+### Why Pull Requests Are Important
+
+Benefits:
+
+* Code review
+* Collaboration
+* Safer development
+* Better project management
+
+Most software companies require Pull Requests before changes are merged into production code.
+
+---
+
+### What is a Merge?
+
+A merge combines changes from one branch into another.
+
+Example:
+
+```text
+main
+  │
+  └── week-1
+          ↓
+        Merge
+          ↓
+main
+```
+
+After merging, all approved changes become part of the main branch.
+
+---
+
+### Git Workflow
+
+Typical workflow:
+
+```text
+Create Branch
+      ↓
+Make Changes
+      ↓
+git add
+      ↓
+git commit
+      ↓
+git push
+      ↓
+Create Pull Request
+      ↓
+Merge Pull Request
+      ↓
+Delete Branch
+```
+
+This is the standard workflow used by professional development teams.
+
+---
+
+## Common Git Commands
+
+Check status:
+
+```bash
+git status
+```
+
+Check branches:
+
+```bash
+git branch
+```
+
+Create and switch branch:
+
+```bash
+git checkout -b week-1
+```
+
+Stage files:
+
+```bash
+git add .
+```
+
+Create commit:
+
+```bash
+git commit -m "Commit message"
+```
+
+Push changes:
+
+```bash
+git push
+```
+
+Push a new branch:
+
+```bash
+git push -u origin week-1
+```
+
