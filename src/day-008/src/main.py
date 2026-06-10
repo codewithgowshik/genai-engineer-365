@@ -1,3 +1,5 @@
+from llm import llm
+
 def main():
     question = input("Ask anything: ")
     print(llm(question))
