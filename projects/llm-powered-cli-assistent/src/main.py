@@ -21,6 +21,7 @@ from storage import (
     load_conversation
 )
 from metrics import show_metrics
+from commands import handle_command
 logger.info("App is started")
 
 
@@ -37,12 +38,13 @@ async def main():
         # Remove unnecessary spaces
         question = clean_prompt(question)
         # /usage (to estimate the total_input tokens and output tokens and cost)
-        if question.lower() == "/usage":
-            show_metrics()
-            continue 
-        # Exit condition
-        if question.lower() == "exit":
-            break
+        handled , summary = handle_command(
+            question,
+            history,
+            summary
+        )
+        if handled:
+            continue
 
 
         # Store the user question in recent history
