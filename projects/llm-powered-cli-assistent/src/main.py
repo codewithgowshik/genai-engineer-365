@@ -37,7 +37,6 @@ async def main():
 
         # Remove unnecessary spaces
         question = clean_prompt(question)
-        # /usage (to estimate the total_input tokens and output tokens and cost)
         handled , summary = handle_command(
             question,
             history,
