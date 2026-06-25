@@ -22,14 +22,16 @@ from storage import (
 )
 from metrics import show_metrics
 from commands import handle_command
-logger.info("App is started")
+from personas import PERSONAS
 
+logger.info("App is started")
 
 async def main():
 
     # Load previous history and summary from conversation.json
     history, summary = load_conversation()
-
+    #default persona
+    current_profile = None
     while True:
 
         # Take user input
@@ -37,10 +39,12 @@ async def main():
 
         # Remove unnecessary spaces
         question = clean_prompt(question)
-        handled , summary = handle_command(
+        # /usage (to estimate the total_input tokens and output tokens and cost)
+        handled , summary, current_profile = handle_command(
             question,
             history,
-            summary
+            summary,
+            current_profile
         )
         if handled:
             continue
@@ -51,12 +55,15 @@ async def main():
             history,
             question
         )
-
+        profile_text = ""
+        if current_profile:
+            profile_text = current_profile
         # Build the prompt using:
         # 1. Long-term memory (summary)
         # 2. Recent conversation (history)
         request = requests(
             prompt=f"""
+{profile_text}
 Summary:
 
 {summary}
