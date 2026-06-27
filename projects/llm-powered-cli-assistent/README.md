@@ -12,7 +12,7 @@ A command-line AI assistant powered by Gemini with:
 - Rich terminal output
 ## 🎬 Demo
 
-![LLM CLI Assistant Demo](demo.gif)
+![LLM CLI Assistant Demo](Demo.gif)
 
 ## Features
 
