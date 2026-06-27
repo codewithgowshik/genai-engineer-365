@@ -10,6 +10,9 @@ A command-line AI assistant powered by Gemini with:
 - Token and cost tracking
 - Typer CLI
 - Rich terminal output
+## 🎬 Demo
+
+![LLM CLI Assistant Demo](demo.gif)
 
 ## Features
 
