@@ -1,0 +1,40 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "envora"
+version = "0.1.0"
+description = "AI Sustainability Assistant"
+readme = "README.md"
+requires-python = ">=3.12"
+
+dependencies = [
+    "google-genai",
+    "rich",
+    "python-dotenv",
+    "pydantic",
+    "typer"
+]
+
+[project.scripts]
+envora = "main:run"
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+py-modules = [
+    "app",
+    "commands",
+    "config",
+    "helper",
+    "llm",
+    "logger_config",
+    "main",
+    "memory",
+    "metrics",
+    "models",
+    "personas",
+    "storage",
+    "summary_memory",
+    "system_prompts",
+]
