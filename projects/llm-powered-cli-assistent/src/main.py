@@ -109,6 +109,11 @@ Recent Conversation:
         )
 
 
+# Entry point used by the `envora` console script
+def run():
+    asyncio.run(main())
+
+
 # Run main() only when this file is executed directly
 if __name__ == "__main__":
-    asyncio.run(main())
+    run()
