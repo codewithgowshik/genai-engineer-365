@@ -4,7 +4,7 @@ from rich.console import Console
 from config import client
 from logger_config import logger
 from models import requests, response
-from system_prompts import SYSTEM_PROMPT
+from prompts.system_prompts import SYSTEM_PROMPT
 from metrics import (
     estimate_tokens,
     calculate_cost,
