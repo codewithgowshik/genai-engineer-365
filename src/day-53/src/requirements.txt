@@ -1,0 +1,8 @@
+google-genai
+python-dotenv
+rich
+pydantic
+pytest
+typer
+tavily-python
+pymupdf
