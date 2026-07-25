@@ -1,0 +1,2 @@
+[console_scripts]
+envora = src.main:run
