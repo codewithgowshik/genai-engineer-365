@@ -151,27 +151,6 @@ Rather than replacing humans, the system automates repetitive information extrac
 
 ---
 
-# Repository Structure
-
-Today's project structure:
-
-```text
-structured-extraction-service/
-
-│
-├── README.md
-├── extractor.py
-├── schemas.py
-├── prompts.py
-├── sample_documents/
-├── outputs/
-└── requirements.txt
-```
-
-Each file has a dedicated responsibility within the extraction pipeline.
-
----
-
 # Extraction Workflow
 
 The complete process follows these steps:
