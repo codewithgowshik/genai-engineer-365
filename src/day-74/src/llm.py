@@ -12,7 +12,8 @@ def generate_text(prompt, temperature):
         model=MODEL_NAME,
         contents=prompt,
         config=types.GenerateContentConfig(
-            temperature=temperature,
+            temperature=0.5,
+            top_p = top_p,
             max_output_tokens=200,
         ),
     )
