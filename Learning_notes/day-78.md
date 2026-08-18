@@ -460,50 +460,29 @@ The LLM uses the retrieved information to **generate the answer**.
 
 ---
 
-# 13. Key Formulas
+## 13. Key Formulas
 
-### Token embedding lookup concept
+**Token embedding lookup concept**
 
-\[
-\mathbf{e}_i = E[i]
-\]
+$$\mathbf{e}_i = E[i]$$
 
 A token ID acts as an index into a learned embedding matrix.
 
-### Mean pooling
+**Mean pooling**
 
-\[
-\boxed{
-\text{Pooled Vector} =
-\frac{1}{n}\sum_{i=1}^{n}v_i
-}
-\]
+$$\boxed{\text{Pooled Vector} = \frac{1}{n}\sum_{i=1}^{n}v_i}$$
 
-### Dot product
+**Dot product**
 
-\[
-\boxed{
-A\cdot B=\sum_i a_i b_i
-}
-\]
+$$\boxed{A\cdot B=\sum_i a_i b_i}$$
 
-### Cosine similarity
+**Cosine similarity**
 
-\[
-\boxed{
-\text{cosine similarity}(A,B)
-=
-\frac{A\cdot B}{\|A\|\|B\|}
-}
-\]
+$$\boxed{\text{cosine similarity}(A,B) = \frac{A\cdot B}{|A||B|}}$$
 
-### Euclidean distance
+**Euclidean distance**
 
-\[
-\boxed{
-d(A,B)=\sqrt{\sum_i(a_i-b_i)^2}
-}
-\]
+$$\boxed{d(A,B)=\sqrt{\sum_i(a_i-b_i)^2}}$$
 
 ---
 
