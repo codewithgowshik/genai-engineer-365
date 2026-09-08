@@ -1,0 +1,4 @@
+Python is a programming language.
+Machine learning allows computers to learn from data.
+Pizza is a popular Italian food.
+London is the capital of the United Kingdom.
