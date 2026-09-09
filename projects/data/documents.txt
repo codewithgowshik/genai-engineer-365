@@ -1,0 +1,5 @@
+Python is a programming language.
+Machine learning allows computers to learn from data.
+Vector databases store numerical representations of information.
+Semantic search finds information based on meaning.
+London is the capital of the United Kingdom.
