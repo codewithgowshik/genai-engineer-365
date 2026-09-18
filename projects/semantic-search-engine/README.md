@@ -453,3 +453,16 @@ The goal of this project is to build a practical semantic search system that dem
 
 ---
 
+## Status
+
+**Project 3 — Semantic Search Engine**
+
+The project has progressed from basic vector search to a user-facing semantic search application with evaluation, ranking experiments, performance measurements, and documentation.
+
+---
+
+## Author
+
+**Gowshik Subramanian**
+
+Built as part of a 365-day Gen AI learning journey.
