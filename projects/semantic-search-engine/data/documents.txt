@@ -1,5 +1,26 @@
-Python is a programming language.
-Machine learning allows computers to learn from data.
-Vector databases store numerical representations of information.
-Semantic search finds information based on meaning.
+Python is a programming language used to build software, websites, automation tools, and applications.
+Machine learning allows computers to learn patterns from data and make predictions.
+Deep learning is a branch of machine learning that uses neural networks with multiple layers.
+Natural language processing helps computers understand, process, and generate human language.
+Artificial intelligence enables computer systems to perform tasks that normally require human intelligence.
+Vector databases store numerical representations of information and allow efficient similarity search.
+Embeddings represent text as numerical vectors that capture semantic meaning.
+Semantic search finds information based on meaning rather than relying only on exact keywords.
+Keyword search finds documents by looking for specific words or phrases in the text.
+Hybrid search combines keyword matching with semantic vector search to improve retrieval.
+Chroma is a vector database that can store embeddings and perform similarity searches.
+FAISS is a library designed for efficient similarity search over large collections of vectors.
+Streamlit is a Python framework for building interactive web applications quickly.
+FastAPI is a Python framework for building APIs with high performance and automatic documentation.
+APIs allow different software applications to communicate with each other.
+Git is a version control system used to track changes in software projects.
+GitHub is a platform for hosting Git repositories and collaborating on software projects.
+A dataset is a collection of information used for testing, analysis, or machine learning.
+Chunking divides large pieces of text into smaller sections before they are converted into embeddings.
+Top-K retrieval returns the K most relevant results for a search query.
+Reproducibility means that another person can follow the same steps and obtain a similar result.
 London is the capital of the United Kingdom.
+The University of Leicester is a university located in the United Kingdom.
+Nottingham is a city in England known for its universities and historical connections to Robin Hood.
+Pizza is a popular Italian food made with a base, sauce, cheese, and various toppings.
+Coffee is a widely consumed beverage made by brewing roasted coffee beans with water.
