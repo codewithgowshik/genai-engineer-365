@@ -1,0 +1,77 @@
+Java is a programming language commonly used for enterprise applications.
+JavaScript is used to build interactive websites and web applications.
+TypeScript adds static typing to JavaScript.
+HTML provides the structure of web pages.
+CSS controls the appearance and layout of web pages.
+React is a JavaScript library for building user interfaces.
+Node.js allows JavaScript to run outside a web browser.
+Express is a web framework commonly used with Node.js.
+MongoDB is a document-oriented database that stores data in flexible documents.
+SQL is a language used to query relational databases.
+PostgreSQL is an open-source relational database system.
+Git tracks changes to files and supports collaborative software development.
+GitHub hosts Git repositories and supports collaboration.
+Docker packages applications and their dependencies into containers.
+An API defines how software systems communicate.
+REST APIs commonly use HTTP methods such as GET, POST, PUT, and DELETE.
+FastAPI is a Python framework for building APIs.
+Automated tests help developers detect software defects.
+Unit tests check individual components of a software application.
+Debugging is the process of finding and fixing problems in software.
+Machine learning models learn patterns from example data.
+Supervised learning uses labelled examples to train a model.
+Unsupervised learning finds patterns in data without labelled targets.
+Reinforcement learning trains an agent through rewards and penalties.
+A neural network contains interconnected computational units called neurons.
+Deep learning uses neural networks with multiple layers.
+Training adjusts model parameters to reduce a chosen loss function.
+A dataset is used to train, validate, or evaluate a model.
+Overfitting occurs when a model fits training data too closely and generalises poorly.
+Model evaluation measures how well a model performs on chosen tasks.
+Classification predicts categories for input examples.
+Regression predicts numerical values.
+Natural language processing focuses on processing human language.
+Tokenisation splits text into smaller units called tokens.
+A language model predicts or generates sequences of tokens.
+An embedding represents an item as a numerical vector.
+Cosine similarity measures the angle-based similarity between vectors.
+A vector database stores vectors and supports similarity search.
+Nearest-neighbour search finds vectors close to a query vector.
+Approximate nearest-neighbour search trades some exactness for faster retrieval.
+HNSW is an index structure used for approximate nearest-neighbour search.
+FAISS provides tools for efficient similarity search over vectors.
+Chroma can store embeddings and retrieve similar documents.
+Metadata stores structured information about a document, such as its source or topic.
+Metadata filtering restricts retrieval using structured conditions.
+Semantic search retrieves information based on meaning.
+Keyword search retrieves information based on matching terms.
+Hybrid search combines signals from keyword and semantic retrieval.
+Query rewriting changes a question into a different search query.
+Multi-query retrieval searches using multiple versions of a question.
+Reranking reorders candidate documents according to their relevance.
+A cross-encoder scores a query and document together.
+Reciprocal rank fusion combines multiple ranked lists into one ranking.
+Retrieval-augmented generation retrieves external information before generating an answer.
+A RAG system can use retrieved documents as context for a language model.
+Chunking divides long documents into smaller sections for retrieval.
+Chunk overlap preserves some shared text between adjacent chunks.
+Top-K retrieval returns a chosen number of the highest-ranked results.
+A prompt provides instructions and context to a language model.
+Grounding connects a generated answer to supporting information.
+Source citations help readers identify where retrieved information came from.
+Context compression removes unnecessary information from retrieved context.
+Context reordering changes the order of information supplied to a model.
+The lost-in-the-middle problem describes difficulty using information placed in the middle of long contexts.
+Precision measures the proportion of retrieved results that are relevant.
+Recall measures the proportion of relevant items that were retrieved.
+Search latency measures the time taken to return search results.
+Caching stores reusable results or resources to reduce repeated work.
+Data cleaning identifies and corrects problems in datasets.
+Duplicate records can waste storage and affect retrieval results.
+Incremental ingestion processes new or changed documents without rebuilding everything.
+London is a major city on the River Thames in England.
+Nottingham is a city in the East Midlands of England.
+Leicester is a city in the East Midlands of England.
+The United Kingdom consists of England, Scotland, Wales, and Northern Ireland.
+The Earth orbits the Sun.
+Water is composed of hydrogen and oxygen.
