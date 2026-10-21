@@ -1,0 +1,11 @@
+Password Reset Policy
+
+Users can reset their password by selecting "Forgot password" on the sign-in page. A password reset link is sent to the registered email address. The link expires after 30 minutes. If the email does not arrive, users should check their spam folder before contacting support.
+
+Refund Policy
+
+Customers can request a refund within 30 days of purchase if the product meets the return conditions. Refund requests must include the order reference. Some products may be excluded from the standard refund policy.
+
+International Orders
+
+International orders may be subject to customs charges and local import taxes. These charges depend on the destination country and are the customer's responsibility unless the order terms state otherwise.
