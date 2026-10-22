@@ -1,45 +1,111 @@
+from pathlib import Path
+
 import chromadb
 from sentence_transformers import SentenceTransformer
 
-CHROMA_PATH = "chroma_data"
+from reranking import rerank_results
+
+
+# Project configuration
+BASE_DIR = Path(__file__).resolve().parent.parent
+CHROMA_DIR = BASE_DIR / "chroma_data"
+
+MODEL_NAME = "sentence-transformers/all-MiniLM-L6-v2"
 COLLECTION_NAME = "knowledge_base"
-EMBEDDING_MODEL = "sentence-transformers/all-MiniLM-L6-v2"
+
+RETRIEVAL_K = 10
+FINAL_TOP_K = 3
 
 
-def retrieve(query: str, k: int = 3) -> dict:
-    if not query or not query.strip():
-        raise ValueError("query must not be empty")
-    if k < 1:
-        raise ValueError("k must be at least 1")
+def retrieve_candidates(query, top_k=RETRIEVAL_K):
+    """Retrieve candidate passages from ChromaDB."""
+    client = chromadb.PersistentClient(path=str(CHROMA_DIR))
 
-    client = chromadb.PersistentClient(path=CHROMA_PATH)
-    collection = client.get_or_create_collection(name=COLLECTION_NAME)
+    collection = client.get_collection(
+        name=COLLECTION_NAME
+    )
 
     if collection.count() == 0:
-        raise RuntimeError(
-            "The knowledge base is empty. Run ingestion first: "
-            "python -m src.ingestion"
-        )
+        return []
 
-    model = SentenceTransformer(EMBEDDING_MODEL)
-    query_embedding = model.encode([query], convert_to_numpy=True).tolist()
+    model = SentenceTransformer(MODEL_NAME)
 
-    return collection.query(
-        query_embeddings=query_embedding,
-        n_results=min(k, collection.count()),
+    query_embedding = model.encode(
+        query,
+        normalize_embeddings=True,
+    ).tolist()
+
+    results = collection.query(
+        query_embeddings=[query_embedding],
+        n_results=min(top_k, collection.count()),
         include=["documents", "metadatas", "distances"],
     )
 
+    candidates = []
+
+    documents = results["documents"][0]
+    metadatas = results["metadatas"][0]
+    distances = results["distances"][0]
+
+    for document, metadata, distance in zip(
+        documents,
+        metadatas,
+        distances,
+    ):
+        candidates.append(
+            {
+                "text": document,
+                "source": metadata.get("source", "unknown"),
+                "chunk_id": metadata.get("chunk_id", "unknown"),
+                "vector_distance": float(distance),
+            }
+        )
+
+    return candidates
+
+
+def retrieve_and_rerank(query):
+    """Retrieve candidates and return the most relevant passages."""
+    candidates = retrieve_candidates(query)
+
+    ranked_results = rerank_results(
+        query=query,
+        results=candidates,
+        top_k=FINAL_TOP_K,
+    )
+
+    return ranked_results
+
+
+def main():
+    print("Production RAG — Retrieval and Reranking")
+
+    query = input("\nEnter your question: ").strip()
+
+    if not query:
+        print("Please enter a question.")
+        return
+
+    print("\nRetrieving and reranking passages...")
+
+    results = retrieve_and_rerank(query)
+
+    if not results:
+        print("No passages found. Run ingestion first.")
+        return
+
+    print("\nTop-ranked passages:\n")
+
+    for result in results:
+        citation = result["citation_id"]
+
+        print(f"[{citation}] Source: {result['source']}")
+        print(f"Chunk ID: {result['chunk_id']}")
+        print(f"Reranker score: {result['rerank_score']:.4f}")
+        print(f"Vector distance: {result['vector_distance']:.4f}")
+        print(f"Text: {result['text']}")
+        print("-" * 60)
+
 
 if __name__ == "__main__":
-    question = input("Ask a question about the documents: ").strip()
-    results = retrieve(question, k=3)
-
-    for rank, document in enumerate(results["documents"][0], start=1):
-        metadata = results["metadatas"][0][rank - 1]
-        distance = results["distances"][0][rank - 1]
-        print(
-            f"\nResult {rank} | source={metadata.get('source')} "
-            f"| distance={distance:.4f}"
-        )
-        print(document)
+    main()
