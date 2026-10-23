@@ -3,8 +3,7 @@ from pathlib import Path
 import chromadb
 from sentence_transformers import SentenceTransformer
 
-from reranking import rerank_results
-
+from src.reranking import rerank_results
 
 # Project configuration
 BASE_DIR = Path(__file__).resolve().parent.parent
