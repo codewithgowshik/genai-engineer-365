@@ -1,0 +1,17 @@
+[
+  {
+    "question": "What is the refund policy?",
+    "expected_answer": "The refund policy described in the source documents.",
+    "expected_source": "documents.txt"
+  },
+  {
+    "question": "How can a customer reset their password?",
+    "expected_answer": "The password reset procedure described in the source documents.",
+    "expected_source": "documents.txt"
+  },
+  {
+    "question": "What information is available about international orders?",
+    "expected_answer": "The international order information described in the source documents.",
+    "expected_source": "documents.txt"
+  }
+]
