@@ -1,0 +1,32 @@
+[
+  {
+    "id": 1,
+    "instruction": "Identify the target audience",
+    "input": "A small clothing brand sells affordable oversized T-shirts aimed at university students.",
+    "expected": "University students looking for affordable, comfortable and casual clothing."
+  },
+  {
+    "id": 2,
+    "instruction": "Suggest marketing channels",
+    "input": "A local coffee shop wants to attract more university students.",
+    "expected": "Instagram, TikTok, student discounts and university partnerships."
+  },
+  {
+    "id": 3,
+    "instruction": "Create a marketing strategy",
+    "input": "A new gym wants to attract young adults aged 18 to 25.",
+    "expected": "Social media campaigns, referral offers, student memberships and local partnerships."
+  },
+  {
+    "id": 4,
+    "instruction": "Suggest ways to increase sales",
+    "input": "An online skincare business has website visitors but very few purchases.",
+    "expected": "Improve product descriptions, build trust with reviews, simplify checkout and test promotional offers."
+  },
+  {
+    "id": 5,
+    "instruction": "Identify the main marketing problem",
+    "input": "A restaurant posts regularly on Instagram but receives very little customer engagement.",
+    "expected": "The restaurant may have weak content relevance, poor audience targeting or ineffective calls to action."
+  }
+]
